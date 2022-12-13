@@ -10,6 +10,11 @@ import solidJs from "@astrojs/solid-js";
 import svelte from "@astrojs/svelte";
 
 // https://astro.build/config
+import deno from "@astrojs/deno";
+
+// https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), solidJs(), svelte()]
+  integrations: [tailwind(), solidJs(), svelte()],
+  output: "server",
+  adapter: deno()
 });
